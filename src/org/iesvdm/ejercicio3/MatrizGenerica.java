@@ -43,7 +43,7 @@ public class MatrizGenerica <E>{
 
     @Override
     public String toString() {
-        String result = "MatrizGenerica{\nmatriz=\n[";
+        String result = "MatrizGenerica{\nmatriz=[\n";
 
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {

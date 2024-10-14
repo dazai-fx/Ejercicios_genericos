@@ -4,9 +4,13 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
+import org.iesvdm.ejercicio3.MatrizGenerica;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        // Ante la duda lo he hecho con las clases propias de Java y con la clase del ejercicio 3
 
         Random random = new Random();
 
@@ -37,6 +41,24 @@ public class Main {
 
         // los indices empiezan desde 0 por eso a las filas y columnas se le resta 1
         System.out.println("El contenido de la celda en la fila 1 y columna 2 es: "+matriz[0][1]);
+
+        // Haciendolo instanciando una clase MatrizGenerica
+
+        System.out.println("Creando matriz (con clase Matriz generica) de 4 filas y 4 columnas...");
+
+        MatrizGenerica<Integer> miMatriz = new MatrizGenerica<>(4,2);
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 2; j++) {
+                miMatriz.set(i, j, random.nextInt(100));
+            }
+        }
+
+        System.out.println(miMatriz);
+
+        // los indices empiezan desde 0 por eso a las filas y columnas se le resta 1
+        System.out.println("El contenido de la celda en la fila 1 y columna 2 es: "+miMatriz.get(0,1));
+
 
     }
 
